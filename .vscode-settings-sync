@@ -1,0 +1,57 @@
+CODE SETTINGS SYNC UPLOAD SUMMARY
+Version: 3.4.3
+--------------------
+GitHub Token: 9296**********
+GitHub Gist: 4147179931714bc0771289ad8c9c58cb
+GitHub Gist Type: Public
+
+Restarting Visual Studio Code may be required to apply color and file icon theme.
+--------------------
+Files Uploaded:
+  extensions.json > extensions.json
+  settings.json > settings.json
+  settings.json > globalStorage|equinusocio.vsc-material-theme-icons|settings.json
+
+Extensions Ignored:
+  No extensions ignored.
+
+Extensions Removed:
+  No extensions removed.
+
+Extensions Added:
+  bash-debug v0.3.8
+  bash-ide-vscode v1.10.2
+  bats v0.1.7
+  beautify v1.5.0
+  better-cpp-syntax v1.14.31
+  better-shellscript-syntax v1.0.13
+  bracket-pair-colorizer v1.0.61
+  cloudcode v1.3.0
+  cmake v0.0.17
+  code-gnu-global v0.2.2
+  code-runner v0.10.0
+  code-settings-sync v3.4.3
+  cpptools v0.28.1
+  githistory v0.6.5
+  indented-block-highlighting v1.0.7
+  language-fift v0.0.3
+  markdown-pdf v1.4.4
+  markdown-preview-enhanced v0.5.9
+  npm-intellisense v1.3.0
+  prettier-vscode v4.7.0
+  prettify-json v0.0.3
+  python v2020.5.80290
+  shell-format v7.0.1
+  solidity v0.0.73
+  vetur v0.24.0
+  vsc-material-theme v32.6.0
+  vsc-material-theme-icons v1.1.4
+  vscode-docker v1.2.1
+  vscode-eslint v2.1.5
+  vscode-icons v10.1.1
+  vscode-kubernetes-tools v1.2.0
+  vscode-markdownlint v0.35.2
+  vscode-npm-script v0.3.12
+  vscode-yaml v0.8.0
+--------------------
+Done.

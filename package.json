@@ -1,0 +1,14 @@
+{
+  "name": "@gram-net/gram",
+  "version": "0.0.3",
+  "description": "Gram Network",
+  "author": "DW <dw@thegram.org>",
+  "license": "LGPL-2.1-only",
+  "dependencies": {
+    "http-server": "~0.12.3",
+    "pm2": "~4.4.0"
+  },
+  "devDependencies": {
+    "yarn": "~1.22.4"
+  }
+}

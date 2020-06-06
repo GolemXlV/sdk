@@ -1,0 +1,28 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "rootDir": "./src",  
+    "composite": true,
+    "sourceMap":true,
+    "noImplicitAny": false,
+    "declarationMap": true,     
+    "types": [
+      "webpack-env"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./src/**/*.vue",
+    "./tests/**/*.ts",
+    "./tests/**/*.tsx",
+  ],  
+}
+

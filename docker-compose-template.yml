@@ -1,0 +1,80 @@
+version: '3.7'
+configs:
+  TON.env:
+    file: .env
+services:       
+  swarm-visualizer:  
+    image: dockersamples/visualizer  
+    ports:
+      - 8080:${VIZ_PORT}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 64M
+        reservations:
+          cpus: '0.25'
+          memory: 64M   
+      placement:
+        constraints:
+          - node.role==manager
+  gram:  
+    configs:
+      - TON.env
+    image: ${IMAGEURI}
+    command: gram launch
+    ports:
+      - 3278:3278
+      - 3278:3278/udp
+      - ${TON_ENGINE_PORT}:${TON_ENGINE_PORT}
+      - ${TON_ENGINE_PORT}:${TON_ENGINE_PORT}/udp
+      - ${LITESERVER_PORT}:${LITESERVER_PORT}
+      - ${CONSOLE_PORT}:${CONSOLE_PORT}
+      - ${WEB_EXPLORER_PORT}:${WEB_EXPLORER_PORT}
+      - ${JSON_EXPLORER_PORT}:${JSON_EXPLORER_PORT}
+      - ${GRAM_API_PORT}:${GRAM_API_PORT}
+    environment:
+      - IP=${IP}
+      - GRAM_IP=${GRAM_IP}
+      - RUNVALIDATOR=${RUNVALIDATOR}
+      - RUNAPI=${RUNAPI}
+      - RUNNAVIGATOR=${RUNNAVIGATOR}
+      - DEPLOYTYPE=${DEPLOYTYPE}
+      - TON_ENGINE_PORT=${TON_ENGINE_PORT}
+      - LITESERVER_PORT=${LITESERVER_PORT}
+      - JSON_EXPLORER_PORT=${JSON_EXPLORER_PORT}
+      - NAV_PORT=${NAV_PORT}
+      - CONSOLE_PORT=${CONSOLE_PORT}
+      - GRAM_API_PORT=${GRAM_API_PORT}
+      - WEB_EXPLORER_PORT=${WEB_EXPLORER_PORT}
+      - VIZ_PORT=${VIZ_PORT}
+      - JSON_EXPLORER_URI=${JSON_EXPLORER_URI}
+      - GRAM_API_URI=${GRAM_API_URI}
+      - TON_LOGLEVEL=${TON_LOGLEVEL}
+      - DOTENV_CONFIG_PATH=${DOTENV_CONFIG_PATH}
+      - FIFTPATH=${FIFTPATH}
+      - LS_PUB=${LS_PUB}
+      - FIFTLIB=${FIFTLIB}
+      - PROFILE=${PROFILE}
+      - TON_SMARTCONT=${TON_SMARTCONT}
+      - NODETYPE=${NODETYPE}
+      - GLOBALCONFIG=${GLOBALCONFIG}
+      - IMAGEURI=${IMAGEURI}
+    volumes:
+      - ./profile:/var/gram/profile
+      - ./tondb:${TONDB}
+    deploy:
+      resources:
+        limits:
+          cpus: '4'
+          memory: 5888M 
+        reservations:
+          cpus: '2'
+          memory: 4096M      
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.role==manager

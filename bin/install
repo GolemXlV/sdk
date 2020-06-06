@@ -1,0 +1,6 @@
+#!/usr/bin/env -S bash -eE
+DIR="$( cd $( dirname $(realpath "${BASH_SOURCE[0]}") )  && pwd )"
+cd $DIR
+rm -rf /usr/local/bin/gram
+ln -s $(realpath ./gram) /usr/local/bin/gram
+gram init

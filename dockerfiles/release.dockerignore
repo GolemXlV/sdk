@@ -1,0 +1,13 @@
+navigator/
+!build/navigator
+!build/ton/validator-engine/validator-engine
+!build/ton/validator-engine-console/validator-engine-console
+!build/ton/lite-client/lite-client
+!build/ton/crypto/fift
+!build/ton/crypto/func
+!build/ton/rldp-http-proxy/rldp-http-proxy
+!build/ton/blockchain-explorer/blockchain-explorer
+!build/ton/json-explorer/json-explorer
+!build/ton/crypto/create-state
+!build/ton/utils/generate-initial-keys
+!build/ton/utils/generate-random-id
